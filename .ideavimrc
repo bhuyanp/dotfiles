@@ -1,0 +1,121 @@
+source ~/.vimrc
+
+
+" Navigation shortcuts
+map <A-h> <Action>(Back)
+map <A-l> <Action>(Forward)
+
+" Code movement shortcuts
+map <A-j> <Action>(MoveLineDown)
+map <A-k> <Action>(MoveLineUp)
+map <A-u> <Action>(MoveStatementDown)
+map <A-i> <Action>(MoveStatementUp)
+map <A-[> <Action>(MethodUp)
+map <A-]> <Action>(MethodDown)
+
+""" Find and Replace shortcuts
+map <C-f> <Action>(Find)
+map <C-r> <Action>(Replace)
+map <S-f> <Action>(FindInPath)
+map <S-r> <Action>(ReplaceInPath)
+
+" map <C-;> <Action>(RecentFiles)
+
+let g:WhichKeyDesc_goto = "<leader>g Goto Actions"
+map <leader>gc <Action>(GotoClass)
+map <leader>gf <Action>(GotoFile)
+map <leader>gs <Action>(GotoSymbol)
+map <leader>ga <Action>(GotoAction)
+map <leader>gd <Action>(GotoDeclaration)
+map <leader>gy <Action>(GotoTypeDeclaration)
+map <leader>gi <Action>(GotoImplementation)
+map <leader>gt <Action>(GotoTest)
+map <leader>gm <Action>(GotoSuperMethod)
+map <leader>gn <Action>(GoToMenu)
+map <leader>gl <Action>(GotoLine)
+
+
+" IdeaVim Config Shortcuts
+let g:WhichKeyDesc_ideavimrc = "<leader>v IdeaVim"
+" open idea vim config
+map <leader>vc :edit ~/.ideavimrc<cr>
+" source idea vim config
+map <leader>vs :source ~/.ideavimrc<cr>:nohlsearch<cr>
+
+let g:WhichKeyDesc_refactor = "<leader>r Refactor Actions"
+map <leader>rr <Action>(Refactorings.QuickListPopupAction)
+map <leader>rn <Action>(RenameElement)
+map <leader>rm <Action>(ExtractMethod)
+map <leader>rv <Action>(IntroduceVariable)
+map <leader>rf <Action>(IntroduceField)
+map <leader>rc <Action>(IntroduceConstant)
+map <leader>rs <Action>(ChangeSignature)
+map <leader>ra <Action>(RearrangeCode)
+map <leader>ri <Action>(OptimizeImports)
+map <leader><leader> <Action>(ReformatCode)
+
+" Goto error shortcuts
+let g:WhichKeyDesc_error = "<leader>e Error Actions"
+map <leader>en <Action>(GotoNextError)
+map <leader>ep <Action>(GotoPreviousError)
+map <leader>ed <Action>(ShowHoverInfo)
+ 
+" Copy file name/path shortcuts
+let g:WhichKeyDesc_copy = "<leader>c Copy Actions"
+map <leader>ca <Action>(CopyAbsolutePath)
+map <leader>cn <Action>(CopyFileName)
+map <leader>cp <Action>(CopyContentRootPath)
+
+let g:WhichKeyDesc_close = "<leader>q Close Actions"
+map <leader>qa <Action>(CloseAllEditors)
+map <leader>qc <Action>(CloseContent)
+
+" Recent files shortcuts
+let g:WhichKeyDesc_recent = "<leader>l Last Change/Recent Locations"
+map <leader>lc <Action>(JumpToLastChange)
+map <leader>ll <Action>(RecentLocations)
+
+let g:WhichKeyDesc_usages = "<leader>u Find/Show Usage"
+map <leader>uf <Action>(FindUsages)
+map <leader>us <Action>(ShowUsages)
+
+let g:WhichKeyDesc_file = "<leader>f File Actions"
+map <leader>fs <Action>(NewScratchFile)
+map <leader>fn <Action>(NewFile)
+map <leader>fd <Action>(NewDir)
+map <leader>fr <Action>(RenameFile)
+map <leader>fo <Action>(OpenFile) 
+map <leader>ft <Action>(FileStructurePopup)
+
+map <leader>im <Action>(QuickImplementations)
+map <leader>td <Action>(QuickTypeDefinition)
+map <leader>ti <Action>(ExpressionTypeInfo)
+map <leader>so <Action>(ViewSource)
+
+map <leader>aa <Action>(ShowIntentionActions)
+map <leader>sw <Action>(SurroundWith)
+map <S-space> <Action>(Generate)
+map <S-k> <Action>(EditorDuplicateLines)
+map <C-[> <Action>(EditorCompleteStatement)
+
+map <leader>ide <Action>(RestartIde)
+
+" split window shortcuts
+let g:WhichKeyDesc_split = "<leader>s Split Actions"
+map <leader>sv <Action>(SplitVertically)
+map <leader>sh <Action>(SplitHorizontally)
+map <leader>su <Action>(UnsplitAll)
+
+" smart line joining
+set ideajoin
+
+""" enable which-key plugin ----------
+set which-key
+"set timeoutlen=5000
+set notimeout
+
+""" easy motion plugin ----------
+set easymotion
+"map <leader><leader>w <Plug>(easymotion-w)
+"map <leader><leader>e <Plug>(easymotion-e)
+"map <leader><leader>b <Plug>(easymotion-b)
