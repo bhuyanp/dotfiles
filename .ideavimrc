@@ -6,12 +6,12 @@ map <A-h> <Action>(Back)
 map <A-l> <Action>(Forward)
 
 " Code movement shortcuts
-map <A-j> <Action>(MoveLineDown)
-map <A-k> <Action>(MoveLineUp)
-map <A-u> <Action>(MoveStatementDown)
-map <A-i> <Action>(MoveStatementUp)
-map <A-[> <Action>(MethodUp)
-map <A-]> <Action>(MethodDown)
+map <C-j> <Action>(MethodDown)
+map <C-k> <Action>(MethodUp)
+"map <A-j> <Action>(MoveLineDown)
+"map <A-k> <Action>(MoveLineUp)
+map <A-j> <Action>(MoveStatementDown)
+map <A-k> <Action>(MoveStatementUp)
 
 """ Find and Replace shortcuts
 map <C-f> <Action>(Find)
@@ -92,6 +92,10 @@ map <leader>td <Action>(QuickTypeDefinition)
 map <leader>ti <Action>(ExpressionTypeInfo)
 map <leader>so <Action>(ViewSource)
 
+
+
+
+
 map <leader>aa <Action>(ShowIntentionActions)
 map <leader>sw <Action>(SurroundWith)
 map <S-space> <Action>(Generate)
@@ -119,3 +123,4 @@ set easymotion
 "map <leader><leader>w <Plug>(easymotion-w)
 "map <leader><leader>e <Plug>(easymotion-e)
 "map <leader><leader>b <Plug>(easymotion-b)
+eef
